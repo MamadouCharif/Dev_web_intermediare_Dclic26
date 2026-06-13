@@ -1,0 +1,38 @@
+/* css/index.css */ 
+body { 
+font-family: Arial, sans-serif; 
+padding: 20px; 
+} 
+/* Thème jour */ 
+.jour { 
+background: #eeeeee; 
+color: #000000; 
+} 
+/* Thème nuit */ 
+.nuit { 
+background: #000000; 
+color: #ffffff; 
+} 
+
+/* Thème bleu */
+.bleu{
+    background:#0d6efd;
+    color:#ffffff;
+}
+
+/* Thème vert */
+.vert{
+    background:#198754;
+    color:#ffffff;
+}
+
+/* Thème contrasté */
+.contraste{
+    background:#ffff00;
+    color:#000000;
+}
+button, input { 
+margin-right: 10px; 
+padding: 10px 12px; 
+cursor: pointer; 
+} 

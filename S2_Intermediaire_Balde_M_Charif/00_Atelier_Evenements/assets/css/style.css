@@ -1,0 +1,19 @@
+/* 00_Atelier_Evenements/style.css */ 
+body{font-family: Arial, sans-serif; margin: 24px;} 
+.container{max-width: 760px;} 
+form input{
+    padding: 7px 50px;
+    border-radius: 5px;
+    border: 0.1px solid gray;
+    margin-top: 10px;
+}
+form .btn{
+    margin-top: 10px;
+}
+.bloc{border: 1px solid #ddd; padding: 16px; border-radius: 8px; margin: 12px 0;} 
+.btn{padding: 8px 12px; cursor: pointer; margin-right: 8px;} 
+.hidden{display:none;} 
+.msg{font-weight: 700; margin-top: 10px;} 
+.error{color:#b00020;} 
+.ok{color:#1b5e20;} 
+ 

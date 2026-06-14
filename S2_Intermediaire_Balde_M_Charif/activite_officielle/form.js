@@ -115,3 +115,60 @@ function forme() {
         alert("Veuillez corriger les erreurs");
     }
 }
+
+
+function enregistrer() {
+
+    verifiernom();
+    verifieradresse();
+    verifierpostal();
+
+    if (
+        document.getElementById("T2").innerHTML == "" &&
+        document.getElementById("T3").innerHTML == "" &&
+        document.getElementById("T4").innerHTML == ""
+    ) {
+
+        localStorage.setItem("civilite",
+            document.querySelector('input[name="civilite"]:checked').value);
+
+        localStorage.setItem("nom", F.nom.value);
+        localStorage.setItem("adresse", F.adresse.value);
+        localStorage.setItem("postal", F.no_postal.value);
+        localStorage.setItem("localite", F.localite.value);
+        localStorage.setItem("pays", F.pays.value);
+
+        alert("Données enregistrées.");
+    }
+    else {
+        alert("Impossible d'enregistrer. Corrigez les erreurs.");
+    }
+}
+
+function recuperer() {
+
+    if (localStorage.getItem("nom") == null) {
+        alert("Aucune donnée enregistrée.");
+        return;
+    }
+
+    F.nom.value = localStorage.getItem("nom");
+    F.adresse.value = localStorage.getItem("adresse");
+    F.no_postal.value = localStorage.getItem("postal");
+    F.localite.value = localStorage.getItem("localite");
+
+    let pays = localStorage.getItem("pays");
+    F.pays.value = pays;
+
+    let civilite = localStorage.getItem("civilite");
+
+    let radios = document.getElementsByName("civilite");
+
+    for (let i = 0; i < radios.length; i++) {
+        if (radios[i].value == civilite) {
+            radios[i].checked = true;
+        }
+    }
+
+    alert("Données récupérées.");
+}

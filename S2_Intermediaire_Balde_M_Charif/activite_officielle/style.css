@@ -15,3 +15,13 @@ input[type=text]:focus {
 #T2, #T3, #T4{
     color: red;
 }
+input[type=button], input[type=reset]{
+    padding: 8px 15px;
+    border-radius: 15px;
+    background-color: rgb(14, 14, 168);
+    border-color: inherit;
+    color: white;
+}
+input[type=button]:hover{
+    background-color: rgb(29, 16, 215);
+}
